@@ -1,0 +1,35 @@
+<div class="app-container">
+  <h2 class="title">Meteo App 🌤</h2>
+
+  <div class="search-box">
+    <input [(ngModel)]="city" placeholder="Inserisci città" />
+    <button (click)="search()">Cerca</button>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-box">
+    ⚠️ {{ errorMessage }}
+  </div>
+  
+  <div *ngIf="weather" class="current-weather">
+    <p>Temperatura: {{ weather.temperature }} °C</p>
+    <p>Vento: {{ weather.windspeed }} km/h</p>
+    <p>Clima: {{ weather.description }}</p>
+  </div>
+
+  <div *ngIf="weather?.forecast" class="forecast-container">
+    <h3 class="forecast-title">Previsioni 5 giorni 🌤</h3>
+    <div class="forecast-cards">
+      <div class="forecast-card" *ngFor="let day of weather.forecast">
+        <div class="date">
+          <strong>{{ day.date | date:'EEEE d MMMM' }}</strong>
+        </div>
+        <div class="icon">{{ getWeatherIcon(day.description) }}</div>
+        <div class="temp">
+          <span class="max"> {{ day.max }} °C </span>
+          <span class="min"> {{ day.min }} °C</span>
+        </div>
+        <div class="desc"> {{ day.description }} </div>
+      </div>
+    </div>
+  </div>
+</div>

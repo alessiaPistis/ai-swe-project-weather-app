@@ -1,0 +1,114 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+/* 🔍 Search box */
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #74ebd5;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.search-box button:hover {
+  background: #5fd3bd;
+}
+
+/* 🌡 Meteo attuale */
+.current-weather {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  color: white;
+  padding: 15px;
+  border-radius: 16px;
+  width: fit-content;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.forecast-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-title {
+  margin-bottom: 15px;
+}
+
+.forecast-cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.forecast-card {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  border-radius: 16px;
+  padding: 15px;
+  width: 120px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+}
+
+.date {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.temp {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.max {
+  font-weight: bold;
+}
+
+.min {
+  opacity: 0.8;
+  margin-left: 5px;
+}
+
+.desc {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.error-box {
+  background: #ffdddd;
+  color: #a94442;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px auto;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
